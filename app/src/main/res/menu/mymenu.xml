@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/singOut"
+        android:onClick="singoutaccount"
+        android:title="Singout"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="shareapp"
+        app:showAsAction="always"
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        android:id="@+id/share">
+    </item>
+
+    <item
+        android:title="setLock"
+        android:id="@+id/lockID"
+        ></item>
+   <!-- <item
+        android:title="REMOVELock"
+        android:id="@+id/removelockID"
+        ></item>-->
+    <item
+        android:title="Rate"
+        android:id="@+id/rate">
+    </item>
+    <item
+        android:title="Review"
+        android:id="@+id/review">
+    </item>
+    <item
+        android:title="More Apps"
+        android:id="@+id/moreapp">
+    </item>
+    <item
+        android:title="exit"
+        android:id="@+id/exit">
+    </item>
+
+</menu>

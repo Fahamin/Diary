@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "422670844900",
+    "firebase_url": "https://diary-with-locker.firebaseio.com",
+    "project_id": "diary-with-locker",
+    "storage_bucket": "diary-with-locker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422670844900:android:379ec59adaab3788",
+        "android_client_info": {
+          "package_name": "app.cave.diarywithloker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422670844900-p1r2dbf44e863ndhghfltup50t2bn1fp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwlLqXnoJV9w9I1AD_I_NSah8m4UdLKsU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,7 @@
 package app.cave.diarywithloker.activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -124,30 +125,30 @@ public class MainActivity extends AppCompatActivity {
                 super.onBackPressed();
                 break;
 
-           /* case R.id.share:
+            case R.id.share:
                 Intent shareIntent = new Intent(android.content.Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Install now");
-              //  String app_url = "https://play.google.com/store/apps/details?id=fff.phot.seeker.dairy";
+                String app_url = "https://play.google.com/store/apps/details?id=app.cave.diarywithloker";
                 shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, app_url);
                 startActivity(Intent.createChooser(shareIntent, "Share via"));
                 break;
             case R.id.rate:
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=fff.phot.seeker.dairy"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=app.cave.diarywithloker"));
                 startActivity(intent);
                 break;
             case R.id.review:
-                Intent inter = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=fff.phot.seeker.dairy"));
+                Intent inter = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=app.cave.diarywithloker"));
                 startActivity(inter);
                 break;
             case R.id.moreapp:
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=7517108231539488434"));
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Cave+of+app"));
                 startActivity(i);
                 break;
             case R.id.exit:
                 finish();
                 System.exit(0);
-                break;*/
+                break;
         }
         return super.onOptionsItemSelected(item);
 

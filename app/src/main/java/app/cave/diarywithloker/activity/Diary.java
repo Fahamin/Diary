@@ -170,7 +170,7 @@ public class Diary extends AppCompatActivity {
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Install now");
-                String app_url = "";
+                String app_url = "https://play.google.com/store/apps/details?id=app.cave.diarywithloker";
                 shareIntent.putExtra(Intent.EXTRA_TEXT, app_url);
                 startActivity(Intent.createChooser(shareIntent, "Share via"));
                 break;
@@ -180,22 +180,23 @@ public class Diary extends AppCompatActivity {
                 finish();
            // case R.id.removelockID:
 //                deleteAccount();
-           /* case R.id.rate:
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+
+            case R.id.rate:
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=app.cave.diarywithloker"));
                 startActivity(intent);
                 break;
             case R.id.review:
-                Intent inter = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+                Intent inter = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=app.cave.diarywithloker"));
                 startActivity(inter);
                 break;
             case R.id.moreapp:
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Cave+of+app"));
                 startActivity(i);
                 break;
             case R.id.exit:
                 finish();
                 System.exit(0);
-                break;*/
+                break;
         }
         return super.onOptionsItemSelected(item);
 

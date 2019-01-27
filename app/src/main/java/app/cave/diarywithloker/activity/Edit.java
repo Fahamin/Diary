@@ -26,6 +26,7 @@ import java.util.Locale;
 
 import app.cave.diarywithloker.R;
 import app.cave.diarywithloker.activity.firebase.LoginF;
+import app.cave.diarywithloker.activity.firebase.RegistrationF;
 import app.cave.diarywithloker.helper.DatabaseHelper;
 import app.cave.diarywithloker.model.DataModel;
 import hani.momanii.supernova_emoji_library.Actions.EmojIconActions;
@@ -38,7 +39,7 @@ public class Edit extends AppCompatActivity {
     String title, description, times, date;
     Calendar calendar;
     int id, flag;
-    EmojiconEditText titleET,descriptionET;
+    EmojiconEditText titleET, descriptionET;
     ImageView imageView;
     ImageView submitBtn;
     DatabaseHelper diaryDatabase;
@@ -80,7 +81,7 @@ public class Edit extends AppCompatActivity {
 
         emojIconActions = new EmojIconActions(this, rootView, titleET, imageView);
         emojIconActions.ShowEmojIcon();
-        emojIconActions.setIconsIds(R.drawable.smiley,R.drawable.ic_action_keyboard);
+        emojIconActions.setIconsIds(R.drawable.smiley, R.drawable.ic_action_keyboard);
         emojIconActions.setUseSystemEmoji(true);
         emojIconActions.setKeyboardListener(new EmojIconActions.KeyboardListener() {
             @Override
@@ -106,7 +107,7 @@ public class Edit extends AppCompatActivity {
     private void init() {
 
         titleET = findViewById(R.id.title_ET);
-        descriptionET =findViewById(R.id.description_ET);
+        descriptionET = findViewById(R.id.description_ET);
         rootView = findViewById(R.id.root_view);
         saveBTN = (Button) findViewById(R.id.save_BTN);
         imageView = findViewById(R.id.emoji_btn);
@@ -179,18 +180,6 @@ public class Edit extends AppCompatActivity {
         auth.signOut();
         startActivity(new Intent(Edit.this, LoginF.class));
         finish();
-
-       /* FirebaseAuth.AuthStateListener stateListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user == null) {
-
-                }
-            }
-        };*/
-
-
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -219,6 +208,10 @@ public class Edit extends AppCompatActivity {
             case R.id.moreapp:
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Cave+of+app"));
                 startActivity(i);
+                break;
+            case R.id.lockID:
+                startActivity(new Intent(this, RegistrationF.class));
+                finish();
                 break;
             case R.id.exit:
                 finish();

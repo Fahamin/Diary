@@ -62,6 +62,7 @@ public class Spalsh_screen extends AwesomeSplash {
     public void animationsFinished() {
         final Intent intent = new Intent(Spalsh_screen.this,LoginF.class);
         startActivity(intent);
+        finish();
     }
 }
 

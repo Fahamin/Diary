@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import app.cave.diarywithloker.R;
 import app.cave.diarywithloker.activity.firebase.LoginF;
+import app.cave.diarywithloker.activity.firebase.RegistrationF;
 import app.cave.diarywithloker.helper.DatabaseHelper;
 import app.cave.diarywithloker.model.DataModel;
 
@@ -70,22 +71,7 @@ public class Details extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.mymenu, menu);
         return super.onCreateOptionsMenu(menu);
     }
-    public void singoutaccount(MenuItem item) {
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        auth.signOut();
-        startActivity(new Intent(Details.this, LoginF.class));
-        finish();
 
-       /* FirebaseAuth.AuthStateListener stateListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user == null) {
-
-                }
-            }
-        };*/
-    }
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
@@ -112,6 +98,10 @@ public class Details extends AppCompatActivity {
             case R.id.moreapp:
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Cave+of+app"));
                 startActivity(i);
+                break;
+            case R.id.lockID:
+                startActivity(new Intent(this, RegistrationF.class));
+                finish();
                 break;
             case R.id.exit:
                 finish();

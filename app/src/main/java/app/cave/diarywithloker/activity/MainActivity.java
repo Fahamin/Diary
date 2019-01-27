@@ -25,6 +25,7 @@ import java.util.Locale;
 
 import app.cave.diarywithloker.R;
 import app.cave.diarywithloker.activity.firebase.LoginF;
+import app.cave.diarywithloker.activity.firebase.RegistrationF;
 import app.cave.diarywithloker.helper.DatabaseHelper;
 import app.cave.diarywithloker.model.DataModel;
 import hani.momanii.supernova_emoji_library.Actions.EmojIconActions;
@@ -107,15 +108,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, LoginF.class));
         finish();
 
-       /* FirebaseAuth.AuthStateListener stateListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user == null) {
-
-                }
-            }
-        };*/
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -144,6 +136,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.moreapp:
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Cave+of+app"));
                 startActivity(i);
+                break;
+            case R.id.lockID:
+                startActivity(new Intent(this, RegistrationF.class));
+                finish();
                 break;
             case R.id.exit:
                 finish();

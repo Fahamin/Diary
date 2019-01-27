@@ -12,13 +12,11 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -178,9 +176,7 @@ public class Diary extends AppCompatActivity {
             case R.id.lockID:
                 startActivity(new Intent(this, RegistrationF.class));
                 finish();
-           // case R.id.removelockID:
-//                deleteAccount();
-
+                break;
             case R.id.rate:
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=app.cave.diarywithloker"));
                 startActivity(intent);
@@ -217,7 +213,6 @@ public class Diary extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-               // Log.e(TAG,"Ocurrio un error durante la eliminación del usuario", e);
             }
         });
     }

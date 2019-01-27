@@ -40,7 +40,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:padding="8dp"
-            android:text="No record found\nTap '+' to add new app.cave.diarywithloker.Diary"
+            android:text="No record found\nTap '+' to add new record!!"
             android:textSize="18sp" />
 
     </LinearLayout>
